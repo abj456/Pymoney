@@ -28,12 +28,3 @@ desc1 amt1, desc2 amt2, desc3 amt3, ...''')
     elif cmd == "exit":
         break
 
-
-
-# print("Here's your expense and income records:")
-# for rec in record:
-#     print(' '.join(rec))
-#     total_money.append(int(rec[1]))
-
-# print(f'Now you have {sum(total_money)} dollars.')
-
