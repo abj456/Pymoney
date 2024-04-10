@@ -17,8 +17,10 @@ try:
     print('Welcome back!')
 
 except FileNotFoundError:
-    init_money = int(input('How much money do you have? '))
-
+    try:
+        init_money = int(input('How much money do you have? '))
+    except ValueError:
+        sys.stderr.write('Invalid value for money. Set to 0 by default')
 
 
 with open('./records.txt', 'w+') as fh_rec:
@@ -50,4 +52,7 @@ desc1 amt1, desc2 amt2, desc3 amt3, ...''')
             for line in record:
                 fh_rec.writelines(' '.join(line) + '\n')
             break
+        else:
+            sys.stderr.write('Invalid command. Try again.')
+
 
