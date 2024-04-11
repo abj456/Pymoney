@@ -88,6 +88,7 @@ def save(initial_money: int, records: list):
     fh_rec.writelines(str(initial_money) + '\n')
     for line in records:
         fh_rec.writelines(' '.join(line) + '\n')
+    fh_rec.close()
     return None
 
 initial_money, records = initialize()
