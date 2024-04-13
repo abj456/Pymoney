@@ -66,6 +66,7 @@ def view(initial_money: int, records: list):
     print("Here's your expense and income records:")
     print(f"{'Description':<15s}{'Amount':<8s}{'idx':<4s}")
     print("=" * 30)
+    print(f"{'initial money':<15s}{initial_money:<8d}")
     for i, rec in enumerate(records):
         print(f"{rec[0]:<15s}{rec[1]:<8s}{(i + 1):<4d}")
         total_money += int(records[i][1])
