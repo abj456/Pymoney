@@ -30,12 +30,13 @@ def initialize():
         init_money = init_pymoney()
     except :
         sys.stderr.write('Invalid format in records.txt. Deleting the contents.\n')
+        fh_rec_r.close()
         init_money = init_pymoney()
         record.clear()
     else:
+        fh_rec_r.close()
         print('Welcome back!')
     finally:
-        fh_rec_r.close()
         return (init_money, record)
 
 def add(records: list = []):
