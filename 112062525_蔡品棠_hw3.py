@@ -188,7 +188,7 @@ while True:
     cmd = input("\nWhat do you want to do (add / view / delete / view categories / find / exit)? ")
     if cmd == "add":
         record = input('Add some expense or income records with category, description, and amount\
-                        (separate by spaces):\ncat1 desc1 amt1, cat2 desc2 amt2, cat3 desc3 amt3, ...\n')
+(separate by spaces):\ncat1 desc1 amt1, cat2 desc2 amt2, cat3 desc3 amt3, ...\n')
         records.add(record, categories)
     elif cmd == "view":
         records.view()
