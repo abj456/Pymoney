@@ -55,32 +55,6 @@ class Categories:
         takes a category name to find, 
         and returns a non-nested list containing the specified category and all the subcategories under it (if any).
         '''
-        # def flatten(L):
-        #     '''
-        #     return a flat list that contains all element in the nested list L\n
-        #     for example, flatten([1,2,[3,[4],5]]) returns [1,2,3,4,5]
-        #     '''
-        #     if type(L) == list:
-        #         result = []
-        #         for child in L:
-        #             result.extend(flatten(child))
-        #         return result
-        #     else:
-        #         return [L]
-        # def finding_subcat(category: str, categories = self._categories):
-        #     if type(categories) == list:
-        #         for v in categories:
-        #             p = finding_subcat(category, v)
-        #             if p == True:
-        #                 index = categories.index(v)
-        #                 if index + 1 < len(categories) and type(categories[index + 1] == list):
-        #                     return flatten(categories[index:index + 2])
-        #                 else:
-        #                     return [v]
-        #             if p != []:
-        #                 return p
-        #     return True if categories == category else []
-        
         def find_subcategories_gen(category: str, categories = self._categories, found=False):
             if type(categories) == list:
                 for index, child in enumerate(categories):
@@ -91,7 +65,6 @@ class Categories:
                 if categories == category or found == True:
                     yield categories
 
-        # return finding_subcat(category_name)
         return [cat for cat in find_subcategories_gen(category_name)]
     
 
@@ -231,7 +204,6 @@ while True:
         records.find(target_categories)
         
     elif cmd == "exit":
-        # print(record)
         records.save()
         break
     else:
