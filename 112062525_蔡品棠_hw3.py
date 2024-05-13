@@ -208,3 +208,11 @@ while True:
         break
     else:
         sys.stderr.write('Invalid command. Try again.\n')
+
+
+# Explain code
+# class Record, class Records.add(), class Records.find(), and all method of class Categories
+
+# QA section
+# 1. property的功用？
+# 2. generator裡面yield和yield from的差別？
